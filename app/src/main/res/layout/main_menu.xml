@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    android:orientation="vertical"
+    android:background="@color/pastel_orange">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:textColor="@color/purple"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Welcome, User"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/difficulty_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quiz Difficulty: Level 1"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:value="1"
+            android:stepSize="1"
+            android:valueFrom="1"
+            android:valueTo="3"
+            android:visibility="visible"
+
+            app:haloColor="@color/pastel_orange"
+            app:thumbColor="@color/orange"
+            app:thumbRadius="10dp"
+            app:tickColor="@color/orange"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <Button
+            android:id="@+id/menuAddition"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:text="@string/menuAddition"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/purple"/>
+        <Button
+            android:id="@+id/menuSubtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            android:text="@string/menuSubtraction"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/menuMultiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            android:text="@string/menuMultiplication"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/menuDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            android:text="@string/menuDivision"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_margin="10dp"/>
+    </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camilo Rodriguez Gomez | 2024"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

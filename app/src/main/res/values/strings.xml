@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MathQuiz</string>
+    <string name="menuAddition">Addition</string>
+    <string name="menuSubtraction">Subtraction</string>
+    <string name="menuMultiplication">Multiplication</string>
+    <string name="menuDivision">Division</string>
+</resources>
