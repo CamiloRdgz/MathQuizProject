@@ -70,7 +70,7 @@ public class MainMenu extends AppCompatActivity {
 
     public void startQuiz(int quizType) {
 
-        Intent switchToQuiz = new Intent(this, QuizScreen.class);
+        Intent switchToQuiz = new Intent(MainMenu.this, QuizScreen.class);
         switchToQuiz.removeExtra("difficulty");
         switchToQuiz.removeExtra("quizType");
         switchToQuiz.putExtra("difficulty", quizDifficulty);
@@ -86,16 +86,19 @@ public class MainMenu extends AppCompatActivity {
                 Log.i("Quiz-Info", "Selected Subtraction Quiz at difficulty: " + quizDifficulty);
                 switchToQuiz.putExtra("difficulty", quizDifficulty);
                 switchToQuiz.putExtra("quizType", 2);
+                startActivity(switchToQuiz);
                 break;
             case 3:
                 Log.i("Quiz-Info", "Selected Multiplication Quiz at difficulty: " + quizDifficulty);
                 switchToQuiz.putExtra("difficulty", quizDifficulty);
                 switchToQuiz.putExtra("quizType", 3);
+                startActivity(switchToQuiz);
                 break;
             case 4:
                 Log.i("Quiz-Info", "Selected Division Quiz at difficulty: " + quizDifficulty);
                 switchToQuiz.putExtra("difficulty", quizDifficulty);
                 switchToQuiz.putExtra("quizType", 4);
+                startActivity(switchToQuiz);
                 break;
         }
 
